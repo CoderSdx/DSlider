@@ -96,6 +96,7 @@ public class DSlider : UISlider {
         case .default:
             delegate?.slider(self, value: value)
         case .marks:
+            guard marks != 0 else { delegate?.slider(self, value: value); return }
             let average = maximumValue / Float(marks)
             let round = round(value / average)
             if value - average * round > average * 0.5 {
