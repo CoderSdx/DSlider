@@ -1,5 +1,5 @@
 PODS:
-  - DSlider (0.1.1)
+  - DSlider (0.1.4)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DSlider: 65b522a21e4e13cb0e98d655e1cfd7d13ef0ece1
+  DSlider: 037d07a1ea9dc5649a8a8c8b00c3f09cd4b162e6
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
 
 PODFILE CHECKSUM: d868836dccaaeabf6ecece8bf4d3ed87eb24a972

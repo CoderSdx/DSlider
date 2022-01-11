@@ -13,11 +13,14 @@ class ViewController: UIViewController {
     
     lazy var slider1: DSlider = {
         let slider: DSlider = .init(.default)
+        slider.delegate = self
         return slider
     }()
     
     lazy var slider2: DSlider = {
         let slider: DSlider = .init(.marks)
+        slider.marks = 0
+        slider.delegate = self
         return slider
     }()
     
@@ -42,3 +45,8 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController : DSliderDelegate {
+    func slider(_ slider: DSlider, value: Float) {
+        print(value)
+    }
+}
