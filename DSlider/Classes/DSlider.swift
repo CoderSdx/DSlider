@@ -7,44 +7,44 @@
 
 import UIKit
 
-protocol DSliderDelegate : NSObjectProtocol {
+public protocol DSliderDelegate : NSObjectProtocol {
     func slider(_ slider: DSlider, value: Float)
 }
 
-class DSlider : UISlider {
-    enum SliderType {
+public class DSlider : UISlider {
+    public enum SliderType {
         case `default`
         case marks
     }
     
     var type: SliderType
     // type == .marks 分段数
-    var marks: Int = 5
+    public var marks: Int = 5
     
     /// value changed
-    weak var delegate: DSliderDelegate?
+    public weak var delegate: DSliderDelegate?
     
     /// slider 高度和frame.height 有区别
-    var barHeight: CGFloat = 8.0 {
+    public var barHeight: CGFloat = 8.0 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     /// type == .marks 选中的刻度颜色
-    var minimumMarkColor: UIColor = .white {
+    public var minimumMarkColor: UIColor = .white {
         didSet {
             setNeedsDisplay()
         }
     }
     /// type == .marks 未选中的刻度颜色
-    var maximumMarkColor: UIColor = .darkGray {
+    public var maximumMarkColor: UIColor = .darkGray {
         didSet {
             setNeedsDisplay()
         }
     }
      
-    init(_ type: SliderType) {
+    public init(_ type: SliderType) {
         self.type = type
         super.init(frame: .zero)
     }
@@ -54,7 +54,7 @@ class DSlider : UISlider {
     }
     
     
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         super.draw(rect)
         setMinimumTrackImage(trackImage(rect: rect, color: minimumTrackTintColor ?? .blue, markColor: minimumMarkColor), for: .normal)
         setMaximumTrackImage(trackImage(rect: rect, color: maximumTrackTintColor ?? .lightGray, markColor: maximumMarkColor), for: .normal)
@@ -90,7 +90,7 @@ class DSlider : UISlider {
         return image
     }
     
-    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+    public override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
         super.endTracking(touch, with: event)
         switch type {
         case .default:
