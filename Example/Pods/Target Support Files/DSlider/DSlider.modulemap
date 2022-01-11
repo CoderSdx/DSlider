@@ -1,0 +1,6 @@
+framework module DSlider {
+  umbrella header "DSlider-umbrella.h"
+
+  export *
+  module * { export * }
+}

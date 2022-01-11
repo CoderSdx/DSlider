@@ -1,0 +1,27 @@
+PODS:
+  - DSlider (0.1.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - DSlider (from `../`)
+  - FBSnapshotTestCase (~> 2.1.4)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  DSlider:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DSlider: 32d6a6d5584f328c473c643cb9f38d16c38e2d64
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+
+PODFILE CHECKSUM: d868836dccaaeabf6ecece8bf4d3ed87eb24a972
+
+COCOAPODS: 1.11.2
