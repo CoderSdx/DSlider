@@ -20,12 +20,5 @@ let package = Package(
                 .headerSearchPath("."),
             ]
         ),
-        // Mixed languages are not supported now. Go MJExtension project to see tests.
-//        .testTarget(
-//            name: "MJExtensionTests",
-//            dependencies: ["MJExtension"],
-//            path: "MJExtensionTests",
-//            exclude: ["Info.plist"]
-//        )
     ]
 )
